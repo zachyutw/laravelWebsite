@@ -23,3 +23,5 @@ Route::get('/contact','PagesController@getContact');
 Route::post('/contact/submit','MessagesController@submit');
 
 Route::get('/messages','MessagesController@getMessages');
+Route::get('/todo','TodosController@index');
+Route::resource('todo','TodosController');
