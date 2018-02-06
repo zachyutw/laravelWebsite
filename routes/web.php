@@ -25,3 +25,9 @@ Route::post('/contact/submit','MessagesController@submit');
 Route::get('/messages','MessagesController@getMessages');
 Route::get('/todo','TodosController@index');
 Route::resource('todo','TodosController');
+Auth::routes();
+
+Route::resource('listings','ListingsController');
+Route::get('/home', 'HomeController@index')->name('home');
+
+

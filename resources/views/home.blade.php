@@ -1,16 +1,30 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
-<h1>home Page</h1>
-<p>A home page is generally the main page a visitor navigating to a website from a web search engine will see, and it may also serve as a landing page to attract visitors.[1][2] The home page is used to facilitate navigation to other pages on the site by providing links to prioritized and recent articles and pages, and possibly a search box.[3] For example, a news website may present headlines and first paragraphs of top stories, with links to full articles, in a dynamic web page that reflects the popularity and recentness of stories.[4] Meanwhile, other websites utilize the homepage to attract users to create an account. Once they are logged in, the homepage may be redirected to their profile page. This may in turn be referred to as the "personal home page".[5]
+<div class="container">
+        <div class="col-md-8 col-log-8">
+    <div class="row justify-content-center">
+    
+            <div class="card card-default">
+                <div class="card-header">Dashboard</div>
 
-    A website may have multiple home pages, although most have one.[6] Wikipedia, for example, has a home page at wikipedia.org, as well as language-specific home pages, such as en.wikipedia.org and de.wikipedia.org.
-    
-    
-    </p>
+                
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+                        
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('sidebar')
-    @parent
-    <p>This is append to sidebar</p>
+    @include('inc.sidebar')
 @endsection

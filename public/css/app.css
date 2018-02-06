@@ -9995,21 +9995,22 @@ a.text-dark:focus {
 }
 
 #footer {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   padding: 20px;
   color: #fff;
   background: #333;
+  margin-top: 30px;
 }
 
 body {
   color: #777;
 }
 
-.container {
-  margin-top: 10px;
+.content {
+  margin-top: 30px;
+  min-height: calc(100vh - 70px);
 }
 
 .navbar-laravel {

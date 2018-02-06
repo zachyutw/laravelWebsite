@@ -1,6 +1,7 @@
 @extends('layout.app')
 
 @section('content')
+<div class="col-md-8 col-lg-8">
 <h1>Contact Page</h1>
 {!! Form::open(['url' => 'contact/submit']) !!}
     <div class="form-group">
@@ -20,10 +21,11 @@
             </div>
 
 {!! Form::close() !!}
+</div>
 @endsection
 
 @section('sidebar')
-    {{-- @parent --}} 
+    @parent 
     <p>This is append to sidebar</p>
 
 @endsection
