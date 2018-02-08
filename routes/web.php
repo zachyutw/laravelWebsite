@@ -24,10 +24,13 @@ Route::post('/contact/submit','MessagesController@submit');
 
 Route::get('/messages','MessagesController@getMessages');
 Route::get('/todo','TodosController@index');
-Route::resource('todo','TodosController');
+
 Auth::routes();
 
-Route::resource('listings','ListingsController');
+
 Route::get('/home', 'HomeController@index')->name('home');
-
-
+Route::resource('todo','TodosController');
+Route::resource('listings','ListingsController');
+Route::resource('albums','AlbumsController');
+Route::get('/photos/create/{id}','PhotosController@create');
+Route::resource('photos','PhotosController');

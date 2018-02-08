@@ -16,8 +16,9 @@
 
           
             <div class="row">
-               
+               <div class="container text-center" >
                  @include('inc.message') 
+                </div>
                  @yield('content')
                  @yield('sidebar')
                 
@@ -27,6 +28,7 @@
     <footer id="footer" class="text-center">
         <p>Copyright 2018 &copy;</p>
     </footer>
+    <script src="holder.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

@@ -13,6 +13,9 @@
         such as en.wikipedia.org and de.wikipedia.org.
 
     </p>
+    <h1>
+   
+</h1>
 </div>
 @endsection
 @section('sidebar')

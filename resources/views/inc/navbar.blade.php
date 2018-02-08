@@ -13,12 +13,15 @@
         <li class="{{Request::is('/') ? 'active':'' }}"> <a class="nav-link" href="/">Home</a></li>
         <li class="{{Request::is('about') ? 'active':'' }}"> <a class="nav-link" href="/about">About</a></li>
         <li class="{{Request::is('todo') ? 'active':'' }}"> <a class="nav-link" href="/todo">TodoDash</a></li>
+       
+        <li class="{{Request::is('albums') ? 'active':'' }}"> <a class="nav-link" href="/albums">Albums</a></li>
         <li class="{{Request::is('contact') ? 'active':'' }}"> <a class="nav-link" href="/contact">Contact</a></li>
         @guest
                         <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                         <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                         @else
                         <li class="nav-item dropdown">
+                            <li class="{{Request::is('listings') ? 'active':'' }}"> <a class="nav-link" href="/listings">Listings</a></li>
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
