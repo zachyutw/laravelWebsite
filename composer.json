@@ -6,6 +6,7 @@
     "type": "project",
     "require": {
         "php": ">=7.1.0",
+        "barryvdh/laravel-cors": "^0.11.0",
         "fideloper/proxy": "~4.0",
         "fzaninotto/faker": "^1.7",
         "imsky/holder": "^2.9",
@@ -36,6 +37,12 @@
     },
     "extra": {
         "laravel": {
+            "providers": [
+                "Barryvdh\\Debugbar\\ServiceProvider"
+            ],
+            "aliases": {
+                "Debugbar": "Barryvdh\\Debugbar\\Facade"
+            },
             "dont-discover": [
             ]
         }

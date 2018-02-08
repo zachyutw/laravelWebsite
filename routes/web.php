@@ -34,3 +34,4 @@ Route::resource('listings','ListingsController');
 Route::resource('albums','AlbumsController');
 Route::get('/photos/create/{id}','PhotosController@create');
 Route::resource('photos','PhotosController');
+Route::resource('api/items','ItemsController');
